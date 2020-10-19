@@ -1,3 +1,3 @@
 # silvera-demo
 
-Silvera examples from video tutorials
+Silvera examples.
