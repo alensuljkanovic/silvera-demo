@@ -14,8 +14,6 @@ api-gateway EntryGateway {
         url="http://localhost"
     }
 
-    communication_style=rpc
-
     gateway-for{
         User as /api/u
         Bookstore as /api/b

@@ -44,7 +44,7 @@ public class EmailNotifierService implements IEmailNotifierService {
     public void orderCreated(com.silvera.EmailNotifier.messages.ordermsggroup.OrderCreated message){
         Notification n = new Notification();
         n.setOrderId(message.getOrderId());
-        n.setUserEmail(message.setUserEmail());
+        n.setUserEmail(message.getUserEmail());
 
         notificationRepo.save(n);
 
@@ -57,7 +57,7 @@ public class EmailNotifierService implements IEmailNotifierService {
     public void orderUpdated(com.silvera.EmailNotifier.messages.ordermsggroup.OrderUpdated message){
         Notification n = new Notification();
         n.setOrderId(message.getOrderId());
-        n.setUserEmail(message.setUserEmail());
+        n.setUserEmail(message.getUserEmail());
 
         notificationRepo.save(n);
 
@@ -70,7 +70,7 @@ public class EmailNotifierService implements IEmailNotifierService {
     public void orderDeleted(com.silvera.EmailNotifier.messages.ordermsggroup.OrderDeleted message){
         Notification n = new Notification();
         n.setOrderId(message.getOrderId());
-        n.setUserEmail(message.setUserEmail());
+        n.setUserEmail(message.getUserEmail());
 
         notificationRepo.save(n);
 

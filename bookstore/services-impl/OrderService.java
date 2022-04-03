@@ -73,7 +73,7 @@ public class OrderService implements IOrderService {
         orderRepository.save(orderUpdate);
 
         com.silvera.Order.messages.ordermsggroup.OrderUpdated msg = new com.silvera.Order.messages.ordermsggroup.OrderUpdated();
-        msg.setOrderId(order.getId());
+        msg.setOrderId(orderUpdate.getId());
         msg.setUserEmail(userClient.userEmail(orderUpdate.getUser()));
         ordermsggroupOrderUpdatedKafkaTemplate.send("EV_ORDER_UPDATED_CHANNEL", msg);
 
@@ -96,7 +96,7 @@ public class OrderService implements IOrderService {
         orderRepository.delete(entity);
 
         com.silvera.Order.messages.ordermsggroup.OrderDeleted msg = new com.silvera.Order.messages.ordermsggroup.OrderDeleted();
-        msg.setOrderId(order.getId());
+        msg.setOrderId(entity.getId());
         msg.setUserEmail(userClient.userEmail(entity.getUser()));
 
         ordermsggroupOrderDeletedKafkaTemplate.send("EV_ORDER_DELETED_CHANNEL", msg);

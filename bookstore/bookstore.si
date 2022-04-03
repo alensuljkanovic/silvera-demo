@@ -3,7 +3,6 @@ import "setup.si"
 service Bookstore {
 
     service_registry=ServiceRegistry
-    communication_style=rpc
 
     api {
 

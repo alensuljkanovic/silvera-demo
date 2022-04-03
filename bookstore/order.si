@@ -4,7 +4,6 @@ import "bookstore.si"
 
 service Order {
     service_registry=ServiceRegistry
-    communication_style=messaging
 
     api {
 

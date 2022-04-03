@@ -3,7 +3,6 @@ import "setup.si"
 service EmailNotifier {
 
     service_registry=ServiceRegistry
-    communication_style=messaging
 
     api {
 
